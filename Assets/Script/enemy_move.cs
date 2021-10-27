@@ -36,7 +36,7 @@ public class enemy_move : MonoBehaviour
             // if passed the left point position, return around
             if (transform.position.x < leftPoint.position.x)
             {
-                transform.localScale = new Vector3(-1,1,1);
+                transform.localScale = new Vector3(-rb.transform.localScale.x, rb.transform.localScale.y,rb.transform.localScale.z);
                 faceLeft = false;
             }
         }else{
@@ -44,7 +44,7 @@ public class enemy_move : MonoBehaviour
             // if passed the right point position, return around
             if (transform.position.x > rightPoint.position.x)
             {
-                transform.localScale = new Vector3(1,1,1);
+                transform.localScale = new Vector3(rb.transform.localScale.x,rb.transform.localScale.y,rb.transform.localScale.z);
                 faceLeft = true;
             }
         }
