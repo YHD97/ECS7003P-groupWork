@@ -161,7 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movespeed: 3
   jumpspeed: 10
-  timeVal: 0
+  timeVal: 1
 --- !u!50 &774238434
 Rigidbody2D:
   serializedVersion: 4
