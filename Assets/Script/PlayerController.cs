@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float movespeed = 3;
     public float jumpspeed = 10;
     public float timeVal;
+    public GameObject Player_deathPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,7 @@ public class PlayerController : MonoBehaviour
             timeVal += Time.deltaTime;
         }
     }
-
+    //Move of Player
     private void Move()
     {
         float h = Input.GetAxisRaw("Horizontal");
@@ -35,4 +36,13 @@ public class PlayerController : MonoBehaviour
         transform.Translate(Vector3.up * v * jumpspeed * Time.deltaTime, Space.World);
 
     }
+    //Destroy of Player
+    private void Die()
+    {
+        //Death Animation
+         Instantiate(Player_deathPrefab, transform.position, transform.rotation);
+        //Death
+         Destroy(gameObject);
+    }
+
 }

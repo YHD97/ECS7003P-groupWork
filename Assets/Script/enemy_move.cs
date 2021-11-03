@@ -49,4 +49,16 @@ public class enemy_move : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        switch(collision.tag)
+        {
+            case "Player":
+                collision.SendMessage("Die");
+                break;
+            default:
+                break;
+        }
+    }
 }
