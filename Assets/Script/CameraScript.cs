@@ -42,7 +42,6 @@ public class CameraScript : MonoBehaviour
         Vector3 screenPos = camera.WorldToViewportPoint(player.transform.position);
         if (screenPos.x < 0.0) {
             gameoverText.text = "GAME OVER!";
-            Time.timeScale = 0f;
             Invoke("restartLevel", 2);
         }
     }
