@@ -1,79 +1,61 @@
 fileFormatVersion: 2
-guid: ca12f528f862441819e6f2db90b7ed8e
+guid: b726a6e70f8a14e36ba7463d711d220b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3355050833344041385
-    second: CubeEnemy_0
+      213: 2680601896254853669
+    second: CubeLeft_0
   - first:
-      213: -8042376694707994399
-    second: CubeEnemy_1
+      213: 6383785126255917792
+    second: CubeLeft_1
   - first:
-      213: 3901210409454343379
-    second: CubeEnemy_2
+      213: -6483374277694141185
+    second: CubeLeft_2
   - first:
-      213: -6703843688309835367
-    second: CubeEnemy_3
+      213: 2128916852159357445
+    second: CubeLeft_3
   - first:
-      213: 6706957306713226614
-    second: CubeEnemy_4
+      213: -5622095629986193189
+    second: CubeLeft_4
   - first:
-      213: 8960232390751246004
-    second: CubeEnemy_5
+      213: 5739410394088084073
+    second: CubeLeft_5
   - first:
-      213: -5180106034548588047
-    second: CubeEnemy_6
+      213: -5653124214718341165
+    second: CubeLeft_6
   - first:
-      213: -6373319083332913320
-    second: CubeEnemy_7
+      213: -7883120720404183557
+    second: CubeLeft_7
   - first:
-      213: 796130327835236735
-    second: CubeEnemy_8
+      213: -7128949417023156278
+    second: CubeLeft_8
   - first:
-      213: -5465068715649985728
-    second: CubeEnemy_9
+      213: -8238008247054114526
+    second: CubeLeft_9
   - first:
-      213: -4120935411710756252
-    second: CubeEnemy_10
+      213: 662351160033913964
+    second: CubeLeft_10
   - first:
-      213: 202761283822441470
-    second: CubeEnemy_11
+      213: 3172236463540454152
+    second: CubeLeft_11
   - first:
-      213: 1179897620133149695
-    second: CubeEnemy_12
+      213: -8548770279517829613
+    second: CubeLeft_12
   - first:
-      213: 1804376906102541995
-    second: CubeEnemy_13
+      213: -5789355629661337509
+    second: CubeLeft_13
   - first:
-      213: -8070933719665222658
-    second: CubeEnemy_14
+      213: -2855994671289640517
+    second: CubeLeft_14
   - first:
-      213: -8647938547617183842
-    second: CubeEnemy_15
+      213: -8192549671914750340
+    second: CubeLeft_15
   - first:
-      213: 8430718822469295445
-    second: CubeEnemy_16
+      213: 520349000064258792
+    second: CubeLeft_16
   - first:
-      213: 4838602725811050829
-    second: CubeEnemy_17
-  - first:
-      213: -2197257283738262130
-    second: CubeEnemy_18
-  - first:
-      213: 7885944263876498118
-    second: CubeEnemy_19
-  - first:
-      213: -6596294364101875305
-    second: CubeEnemy_20
-  - first:
-      213: 3758016581580319498
-    second: CubeEnemy_21
-  - first:
-      213: -7821109652666615523
-    second: CubeEnemy_22
-  - first:
-      213: -8557833487829305296
-    second: CubeEnemy_23
+      213: 3544743834770198837
+    second: CubeLeft_17
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,7 +100,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -140,7 +122,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -152,7 +134,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -164,7 +146,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -175,13 +157,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CubeEnemy_0
+      name: CubeLeft_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 32
-        height: 32
+        y: 256
+        width: 128
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,83 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a199d405f88f8e20800000000000000
-      internalID: 3355050833344041385
+      spriteID: 5225282e839633520800000000000000
+      internalID: 2680601896254853669
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CubeEnemy_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e0cc0aa10db36090800000000000000
-      internalID: -8042376694707994399
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CubeEnemy_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d41599a232e32630800000000000000
-      internalID: 3901210409454343379
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CubeEnemy_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9993c881fa927f2a0800000000000000
-      internalID: -6703843688309835367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CubeEnemy_4
+      name: CubeLeft_1
       rect:
         serializedVersion: 2
         x: 128
-        y: 64
-        width: 32
-        height: 32
+        y: 256
+        width: 128
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67d3a5ea226e31d50800000000000000
-      internalID: 6706957306713226614
+      spriteID: 0eaf7e4efb2c79850800000000000000
+      internalID: 6383785126255917792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CubeEnemy_5
+      name: CubeLeft_2
       rect:
         serializedVersion: 2
-        x: 160
-        y: 64
-        width: 32
-        height: 32
+        x: 256
+        y: 256
+        width: 128
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b65da3d2e3295c70800000000000000
-      internalID: 8960232390751246004
+      spriteID: ffcc220e17d6606a0800000000000000
+      internalID: -6483374277694141185
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CubeEnemy_6
+      name: CubeLeft_3
       rect:
         serializedVersion: 2
-        x: 192
-        y: 64
-        width: 32
-        height: 32
+        x: 384
+        y: 256
+        width: 128
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,20 +234,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f1cfd7c1019c18b0800000000000000
-      internalID: -5180106034548588047
+      spriteID: 5022d49f89e6b8d10800000000000000
+      internalID: 2128916852159357445
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CubeEnemy_7
+      name: CubeLeft_4
       rect:
         serializedVersion: 2
-        x: 224
-        y: 64
-        width: 32
-        height: 32
+        x: 512
+        y: 256
+        width: 128
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,20 +255,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85739bd9f0c6d87a0800000000000000
-      internalID: -6373319083332913320
+      spriteID: bd0a569cfcd4af1b0800000000000000
+      internalID: -5622095629986193189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CubeEnemy_8
+      name: CubeLeft_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 256
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9621ecf385b76af40800000000000000
+      internalID: 5739410394088084073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeLeft_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dfdd8e6a711c81b0800000000000000
+      internalID: -5653124214718341165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeLeft_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 256
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf589caa877899290800000000000000
+      internalID: -7883120720404183557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeLeft_8
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 32
-        height: 32
+        y: 128
+        width: 128
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,83 +339,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f79d889a05c6c0b00800000000000000
-      internalID: 796130327835236735
+      spriteID: acf4b98a642e01d90800000000000000
+      internalID: -7128949417023156278
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CubeEnemy_9
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 043159255fc2824b0800000000000000
-      internalID: -5465068715649985728
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CubeEnemy_10
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 46af6a2a31f7fc6c0800000000000000
-      internalID: -4120935411710756252
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CubeEnemy_11
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef35078305a50d200800000000000000
-      internalID: 202761283822441470
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CubeEnemy_12
+      name: CubeLeft_9
       rect:
         serializedVersion: 2
         x: 128
-        y: 32
-        width: 32
-        height: 32
+        y: 128
+        width: 128
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -441,20 +360,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffb7d5752a6df5010800000000000000
-      internalID: 1179897620133149695
+      spriteID: 221e9996527bcad80800000000000000
+      internalID: -8238008247054114526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CubeEnemy_13
+      name: CubeLeft_10
       rect:
         serializedVersion: 2
-        x: 160
-        y: 32
-        width: 32
-        height: 32
+        x: 256
+        y: 128
+        width: 128
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -462,20 +381,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bae09217c3f6a0910800000000000000
-      internalID: 1804376906102541995
+      spriteID: c6ca36aeed4213900800000000000000
+      internalID: 662351160033913964
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CubeEnemy_14
+      name: CubeLeft_11
       rect:
         serializedVersion: 2
-        x: 192
-        y: 32
-        width: 32
-        height: 32
+        x: 384
+        y: 128
+        width: 128
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -483,20 +402,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efbd1a92b884eff80800000000000000
-      internalID: -8070933719665222658
+      spriteID: 803ced0a14c060c20800000000000000
+      internalID: 3172236463540454152
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CubeEnemy_15
+      name: CubeLeft_12
       rect:
         serializedVersion: 2
-        x: 224
-        y: 32
-        width: 32
-        height: 32
+        x: 512
+        y: 128
+        width: 128
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -504,20 +423,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e97cedda5b95cf780800000000000000
-      internalID: -8647938547617183842
+      spriteID: 3164cee59baac5980800000000000000
+      internalID: -8548770279517829613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CubeEnemy_16
+      name: CubeLeft_13
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 128
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b58c0a76ab318afa0800000000000000
+      internalID: -5789355629661337509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeLeft_14
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 128
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb95f596af77d58d0800000000000000
+      internalID: -2855994671289640517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeLeft_15
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 128
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e37c8ba773e4e80800000000000000
+      internalID: -8192549671914750340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CubeLeft_16
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -525,83 +507,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55d5b76e91eeff470800000000000000
-      internalID: 8430718822469295445
+      spriteID: 8e25f0c98a6a83700800000000000000
+      internalID: 520349000064258792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CubeEnemy_17
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d4954390b8b262340800000000000000
-      internalID: 4838602725811050829
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CubeEnemy_18
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e8524aa5426c181e0800000000000000
-      internalID: -2197257283738262130
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CubeEnemy_19
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6c253e6c680807d60800000000000000
-      internalID: 7885944263876498118
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CubeEnemy_20
+      name: CubeLeft_17
       rect:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 32
-        height: 32
+        width: 128
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -609,71 +528,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 799ebc979314574a0800000000000000
-      internalID: -6596294364101875305
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CubeEnemy_21
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a0b6f1d8b28272430800000000000000
-      internalID: 3758016581580319498
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CubeEnemy_22
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d197d6b7536d57390800000000000000
-      internalID: -7821109652666615523
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CubeEnemy_23
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 038fdfeb8c77c3980800000000000000
-      internalID: -8557833487829305296
+      spriteID: 531db33acb5713130800000000000000
+      internalID: 3544743834770198837
       vertices: []
       indices: 
       edges: []
