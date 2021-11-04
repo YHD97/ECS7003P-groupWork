@@ -40,7 +40,7 @@ public class CameraScript : MonoBehaviour
     void CheckPlayerTouchedLeft()
     {
         Vector3 screenPos = camera.WorldToViewportPoint(player.transform.position);
-        if (screenPos.x < 0.0) {
+        if (screenPos.x < 0.0 || screenPos.y < 0.0) {
             gameoverText.text = "GAME OVER!";
             Invoke("restartLevel", 2);
         }
