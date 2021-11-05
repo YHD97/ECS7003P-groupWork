@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class enemy_move : MonoBehaviour
 {
@@ -15,6 +17,7 @@ public class enemy_move : MonoBehaviour
     //bool for face is left
     private bool faceLeft = true;
     // Start is called before the first frame update
+    public Text gameoverText;
     void Start()
     {
         //get the enemy position 
@@ -57,11 +60,14 @@ public class enemy_move : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Player"){
-            
+            gameoverText.text = "GAME OVER!";
             Destroy(collision.gameObject);
+            Invoke("restartLevel", 2);
         }
-        
     }
 
-    
+    private void restartLevel() 
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // loads current scene
+    }
 }
