@@ -48,7 +48,7 @@ public class NewPlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(HorizontalMove*speed,rb.velocity.y);
 
         if (HorizontalMove != 0) {
-            transform.localScale = new Vector3(HorizontalMove/2,transform.localScale.y,transform.localScale.z);
+            transform.localScale = new Vector3(transform.localScale.x*HorizontalMove,transform.localScale.y,transform.localScale.z);
         }
     }
 
