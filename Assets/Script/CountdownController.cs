@@ -31,7 +31,7 @@ public class CountdownController : MonoBehaviour
         (camera.GetComponent(cameraScriptName) as MonoBehaviour).enabled = true;
         (player.GetComponent(playerScript) as MonoBehaviour).enabled = true;
         rules.SetActive(false);
-        countdownDisplay.text = "GO!";
+        countdownDisplay.text = "MOVE NOW!";
         yield return new WaitForSeconds(1f);
         countdownDisplay.gameObject.SetActive(false);
     }
