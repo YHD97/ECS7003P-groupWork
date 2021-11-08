@@ -40,8 +40,6 @@ public class NewPlayerMovement : MonoBehaviour
 
         Jump();
 
-       
-        
     }
 
     void groundMove(){
@@ -50,7 +48,6 @@ public class NewPlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(HorizontalMove*speed,rb.velocity.y);
 
         if (HorizontalMove != 0) {
-            print(HorizontalMove);
             transform.localScale = new Vector3(HorizontalMove/2,transform.localScale.y,transform.localScale.z);
         }
     }
