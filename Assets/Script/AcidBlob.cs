@@ -30,9 +30,9 @@ public class AcidBlob : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Player"){
-            Destroy(this.gameObject);
             Destroy(collision.gameObject);
             gameoverText.text = "GAME OVER!";
+            this.gameObject.SetActive(false);
             Invoke("restartLevel", 2);
         }
     }
