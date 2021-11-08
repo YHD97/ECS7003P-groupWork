@@ -7,6 +7,7 @@ public class CountdownController : MonoBehaviour
 {
     public int countdownTime;
     public Text countdownDisplay;
+    public GameObject rules;
     public GameObject camera;
     public string cameraScriptName;
     public GameObject player;
@@ -29,6 +30,7 @@ public class CountdownController : MonoBehaviour
         }
         (camera.GetComponent(cameraScriptName) as MonoBehaviour).enabled = true;
         (player.GetComponent(playerScript) as MonoBehaviour).enabled = true;
+        rules.SetActive(false);
         countdownDisplay.text = "GO!";
         yield return new WaitForSeconds(1f);
         countdownDisplay.gameObject.SetActive(false);
