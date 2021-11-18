@@ -6,6 +6,9 @@ TagManager:
   tags:
   - enemy
   - Camera Target
+  - Trap
+  - Fireball
+  - Acid Drop
   layers:
   - Default
   - TransparentFX
@@ -15,7 +18,7 @@ TagManager:
   - UI
   - Acid Blob
   - Enemy
-  - 
+  - Fireball
   - 
   - 
   - 

@@ -55,19 +55,4 @@ public class enemy_move : MonoBehaviour
             }
         }
     }
-
-    //kill the player
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Player"){
-            gameoverText.text = "GAME OVER!";
-            Destroy(collision.gameObject);
-            Invoke("restartLevel", 2);
-        }
-    }
-
-    private void restartLevel() 
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // loads current scene
-    }
 }

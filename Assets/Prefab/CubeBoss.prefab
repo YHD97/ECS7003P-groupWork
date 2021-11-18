@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4624227441417979143}
   m_Layer: 0
   m_Name: CubeBoss
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -160,6 +160,7 @@ MonoBehaviour:
   leftPoint: {fileID: 4624227442415174129}
   rightPoint: {fileID: 4624227442128109323}
   speed: 5
+  gameoverText: {fileID: 0}
 --- !u!1 &4624227442128109322
 GameObject:
   m_ObjectHideFlags: 0

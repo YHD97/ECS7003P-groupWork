@@ -8,7 +8,6 @@ public class HorizontalPlatform : MonoBehaviour
     public Transform end;
     public GameObject playerPlaceholder;
 
-    private bool triggeredCamera = false;
     private Rigidbody2D rb;
     private bool isMoving = false;
 
