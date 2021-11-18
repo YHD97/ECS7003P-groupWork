@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4576780650144584503}
   - component: {fileID: 7098401848344487563}
   - component: {fileID: -5771910692007203424}
-  - component: {fileID: 3823627297779059502}
   m_Layer: 0
   m_Name: Elevator Platform
   m_TagString: Untagged
@@ -133,18 +132,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3823627297779059502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5265528744225140879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 947e942edd2c41144a0990701297c158, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  topPoint: {fileID: 0}
-  bottomPoint: {fileID: 0}

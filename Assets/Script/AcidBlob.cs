@@ -34,6 +34,9 @@ public class AcidBlob : MonoBehaviour
             gameoverText.text = "GAME OVER!";
             this.gameObject.SetActive(false);
             Invoke("restartLevel", 2);
+        } else {
+            transform.position = new Vector3(topPoint.position.x, topPoint.position.y, topPoint.position.z);
+            rb.velocity = Vector2.zero;
         }
     }
 
