@@ -455,7 +455,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireball: {fileID: 4311853210703829491, guid: a8a09969397d88547b06dbb41a5926d1, type: 3}
-  waitingTime: 3
+  respawnTime: 3
+  killObjectTime: 5
 --- !u!1 &134564225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,7 +1738,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireball: {fileID: 4311853210703829491, guid: a8a09969397d88547b06dbb41a5926d1, type: 3}
-  waitingTime: 5
+  respawnTime: 2
+  killObjectTime: 5
 --- !u!212 &455154723
 SpriteRenderer:
   m_ObjectHideFlags: 0
