@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -8,19 +9,23 @@ public class CameraScript : MonoBehaviour
 {
     public GameObject player;
     public float speed = 3.0f;
-    public Transform target1;
-    public Transform target2;
     public Text gameoverText;
 
+    private GameObject[] targets;
+    private int currentTargetIndex;
+    private int targetLength;
 
     private Camera camera;
-    private bool IsMoving;
+    private bool isMoving;
 
     void Start()
     {
         camera = GetComponent<Camera>();
-        IsMoving = true;
+        isMoving = true;
         gameoverText.text = "";
+        targets = GameObject.FindGameObjectsWithTag("Camera Target").OrderBy(go => go.transform.position.x).ToArray();
+        targetLength = targets.Length;
+        currentTargetIndex = 0;
         transform.DetachChildren();
     }
 
@@ -28,11 +33,13 @@ public class CameraScript : MonoBehaviour
     {
         CheckPlayerTouchedLeft();
         //Moves the GameObject from it's current position to destination over time
-        if (IsMoving) {
-            if(transform.position.x < target1.position.x) {
-                transform.position = Vector3.MoveTowards(transform.position, target1.position, Time.deltaTime * speed);
+        if (isMoving) {
+            if(transform.position.x < targets[currentTargetIndex].transform.position.x) {
+                transform.position = Vector3.MoveTowards(transform.position, targets[currentTargetIndex].transform.position, Time.deltaTime * speed);
             } else {
-                transform.position = Vector3.MoveTowards(transform.position, target2.position, Time.deltaTime * speed);
+                if(currentTargetIndex < targetLength - 1) {
+                    currentTargetIndex = currentTargetIndex + 1;
+                }
             }
         }
     }
