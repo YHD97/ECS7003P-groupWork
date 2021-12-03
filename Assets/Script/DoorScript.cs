@@ -24,7 +24,11 @@ public class DoorScript : MonoBehaviour
 
     void nextLevel() 
     {
-        // ToDo when we have more levels, for now restart level
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        if(SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            SceneManager.LoadScene(0);
+        }
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
