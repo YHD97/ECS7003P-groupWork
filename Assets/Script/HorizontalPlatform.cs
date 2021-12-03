@@ -7,6 +7,7 @@ public class HorizontalPlatform : MonoBehaviour
     public float speed;
     public Transform end;
     public GameObject playerPlaceholder;
+    public bool moveLeft = false;
 
     private Rigidbody2D rb;
     private bool isMoving = false;
@@ -22,11 +23,19 @@ public class HorizontalPlatform : MonoBehaviour
     void Update()
     {
         if(isMoving){
-            transform.Translate(Vector2.right * speed * Time.deltaTime);
-        }
-
-        if (transform.position.x > end.position.x){
-            isMoving = false;
+            if(moveLeft)
+            {
+                transform.Translate(Vector2.left * speed * Time.deltaTime);
+                if (transform.position.x < end.position.x){
+                    isMoving = false;
+                }
+            } else {
+                transform.Translate(Vector2.right * speed * Time.deltaTime);
+                if (transform.position.x > end.position.x){
+                    isMoving = false;
+                }
+            }
+            
         }
     }
 
