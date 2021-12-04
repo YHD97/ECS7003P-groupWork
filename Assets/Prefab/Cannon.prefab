@@ -96,6 +96,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 448bc7cb0c4322346b1442c8f3613336, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireball: {fileID: 4311853210703829491, guid: a8a09969397d88547b06dbb41a5926d1, type: 3}
+  fireball: {fileID: 3648281775925315463, guid: a8a09969397d88547b06dbb41a5926d1, type: 3}
   respawnTime: 3
   killObjectTime: 5
