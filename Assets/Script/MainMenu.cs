@@ -12,6 +12,7 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject mainMenu;
     public GameObject rules;
+    public GameObject options;
 
     public void playGame() 
     {
@@ -30,6 +31,13 @@ public class MainMenu : MonoBehaviour
     {
         // Show rules and do not show main menu
         rules.SetActive(true);
+        mainMenu.SetActive(false);
+    }
+
+    public void showOptions()
+    {
+        // Show options and do not show main menu
+        options.SetActive(true);
         mainMenu.SetActive(false);
     }
 }
