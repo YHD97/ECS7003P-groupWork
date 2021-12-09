@@ -40,4 +40,24 @@ public class MainMenu : MonoBehaviour
         options.SetActive(true);
         mainMenu.SetActive(false);
     }
+
+    public void resume(){
+        this.gameObject.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    public void quitGame() 
+    {
+        // Load main menu
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0);
+    }
+
+    public void restartLevel() 
+    {
+        // Load current scene
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // loads current scene
+    }
+
 }
