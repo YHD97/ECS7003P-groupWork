@@ -1,3 +1,7 @@
+/* 
+Attach this script to the door to reach the next level
+*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,11 +28,13 @@ public class DoorScript : MonoBehaviour
 
     void nextLevel() 
     {
-        if(SceneManager.GetActiveScene().buildIndex == 1)
+        if(SceneManager.GetActiveScene().buildIndex == 2)
         {
             SceneManager.LoadScene(0);
+        } 
+        else 
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
