@@ -22,7 +22,7 @@ public class treasureBox : MonoBehaviour
     void Update()
     {
         
-        if(Input.GetKeyDown(KeyCode.I)){
+        if(Input.GetKeyDown(KeyCode.E)){
             if(canOpen && !isOpened){
                 anim.SetTrigger("Opening");
                 isOpened = true;
