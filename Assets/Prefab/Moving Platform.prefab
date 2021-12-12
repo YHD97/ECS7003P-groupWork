@@ -92,6 +92,36 @@ Transform:
   m_Father: {fileID: 8793138879852888129}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3335018788067578091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 957353271502762926}
+  m_Layer: 3
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &957353271502762926
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3335018788067578091}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1867581805300968565}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8513068594691749717
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,7 +134,7 @@ GameObject:
   - component: {fileID: 1798512114854731113}
   - component: {fileID: 2080047437733598773}
   - component: {fileID: 8546357901533140180}
-  - component: {fileID: 7931721182576292525}
+  - component: {fileID: 763899286429729386}
   m_Layer: 3
   m_Name: Horizontal Platform
   m_TagString: Untagged
@@ -124,6 +154,7 @@ Transform:
   m_LocalScale: {x: 3, y: 2, z: 1}
   m_Children:
   - {fileID: 1249289419318945094}
+  - {fileID: 957353271502762926}
   m_Father: {fileID: 8793138879852888129}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -226,7 +257,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7931721182576292525
+--- !u!114 &763899286429729386
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -235,10 +266,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8513068594691749717}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb24147086b31894494136b75c7ca1d2, type: 3}
+  m_Script: {fileID: 11500000, guid: ce8287f5336c54607a6b93fd755497ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  end: {fileID: 7133116125350736030}
-  playerPlaceholder: {fileID: 1784882929837625513}
-  moveLeft: 0
