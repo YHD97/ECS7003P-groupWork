@@ -19,9 +19,9 @@ TagManager:
   - Acid Blob
   - Enemy
   - Fireball
-  - 
-  - 
-  - 
+  - TriggerBox
+  - item
+  - treasureBox
   - 
   - 
   - 
@@ -45,4 +45,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: treausre
+    uniqueID: 1986904121
+    locked: 0
+  - name: item
+    uniqueID: 3815750111
+    locked: 0
+  - name: Platforms
+    uniqueID: 2126439487
     locked: 0
