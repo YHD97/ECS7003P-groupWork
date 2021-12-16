@@ -19,10 +19,13 @@ public class DeathScript : MonoBehaviour
             if(collision.gameObject.tag == "Fireball" || collision.gameObject.tag == "Acid Drop"){
                 Destroy(collision.gameObject);
             }
+            // Instantiate splatter particles on death.
             instantiatedParticles = Instantiate(deathParticles, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(instantiatedParticles, 5.0f);
+            // Show game over
             gameoverText.text = "GAME OVER!";
             this.gameObject.SetActive(false);
+            // Restart the level
             Invoke("restartLevel", 2);
         }
     }
