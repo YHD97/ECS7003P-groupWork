@@ -15,9 +15,14 @@ public class CountdownController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        (camera.GetComponent(cameraScriptName) as MonoBehaviour).enabled = false;
-        (player.GetComponent(playerScript) as MonoBehaviour).enabled = false;
-        StartCoroutine(CountdownToStart());
+        if(GameSettings.ShowCountdownOnLevelStart)
+        {
+            (camera.GetComponent(cameraScriptName) as MonoBehaviour).enabled = false;
+            (player.GetComponent(playerScript) as MonoBehaviour).enabled = false;
+            StartCoroutine(CountdownToStart());
+        } else {
+            rules.SetActive(false);
+        }
     }
 
     IEnumerator CountdownToStart()
