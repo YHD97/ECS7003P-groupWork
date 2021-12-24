@@ -16,6 +16,9 @@ public class MainMenu : MonoBehaviour
 
     public void playGame() 
     {
+        //Delate All save data
+        PlayerPrefs.DeleteAll();
+
         // Load the first level
         SceneManager.LoadScene(1);
     }
