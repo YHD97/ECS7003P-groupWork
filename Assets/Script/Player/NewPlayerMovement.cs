@@ -30,6 +30,11 @@ public class NewPlayerMovement : MonoBehaviour
         if(Input.GetButtonDown("Jump") && JumpCount > 0){
             JumpPressed = true;
         }
+        if(Input.GetKeyDown(KeyCode.R)){
+            Load();
+
+        }
+        
     }
 
     // Update is called once per frame
@@ -73,5 +78,18 @@ public class NewPlayerMovement : MonoBehaviour
             JumpPressed = false;
         }
 
+    }
+
+    private void Load(){
+        
+        if(PlayerPrefs.HasKey("platerPositionX")){
+            //Load data
+            float platerPositionX = PlayerPrefs.GetFloat("platerPositionX");
+            float platerPositionY = PlayerPrefs.GetFloat("platerPositionY");
+            transform.position = new Vector3(platerPositionX,platerPositionY,transform.position.z);
+        }else{
+            print("No data");
+        }
+        
     }
 }
