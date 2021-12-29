@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class NewPlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Collider2D coll;
+    private CharacterState characterState;
 
     public Transform checkGround;
     public LayerMask Platforms;
@@ -15,8 +17,9 @@ public class NewPlayerMovement : MonoBehaviour
     bool JumpPressed;
     int JumpCount;
 
+    public Vector2 moveValue;
 
-    
+
 
 
     // Start is called before the first frame update
@@ -24,10 +27,11 @@ public class NewPlayerMovement : MonoBehaviour
     {
        rb = GetComponent <Rigidbody2D>();
        coll = GetComponent <Collider2D>();
-
+       characterState = GetComponent<CharacterState>();
     }
+
     void Update() {
-        if(Input.GetButtonDown("Jump") && JumpCount > 0){
+        if((Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.Space)) && JumpCount > 0){
             JumpPressed = true;
         }
         if(Input.GetKeyDown(KeyCode.R)){
@@ -47,14 +51,18 @@ public class NewPlayerMovement : MonoBehaviour
         Jump();
 
     }
+    #region Player movement
+    //get the input value
+    void OnMove(InputValue value) 
+    { 
+        moveValue = value.Get<Vector2>();
+    }
 
     void groundMove(){
-        //move 
-        float HorizontalMove = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(HorizontalMove*speed,rb.velocity.y);
+        rb.velocity = new Vector2(moveValue.x*speed,rb.velocity.y);
         // turn the face
-        if (HorizontalMove != 0) {
-            transform.localScale = new Vector3(HorizontalMove/2,transform.localScale.y,transform.localScale.z);
+        if (moveValue.x != 0) {
+            transform.localScale = new Vector3(moveValue.x/2,transform.localScale.y,transform.localScale.z);
         }
     }
 
@@ -79,6 +87,16 @@ public class NewPlayerMovement : MonoBehaviour
         }
 
     }
+
+    #endregion
+
+    //TODO: player attack
+
+
+    
+
+
+
 
     private void Load(){
         
