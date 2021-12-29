@@ -6,6 +6,9 @@ public class savePoint : MonoBehaviour
 {
     public Transform player;
     private bool canSave;
+     
+   
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,11 +21,9 @@ public class savePoint : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E)){
             if(canSave){
                 Save();
-
             }
             
         }
-        
         
     }
     

@@ -20,6 +20,8 @@ public class NewPlayerMovement : MonoBehaviour
     public Vector2 moveValue;
 
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +51,7 @@ public class NewPlayerMovement : MonoBehaviour
         Jump();
 
     }
-
+    #region Player movement
     //get the input value
     void OnMove(InputValue value) 
     { 
@@ -60,7 +62,6 @@ public class NewPlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(moveValue.x*speed,rb.velocity.y);
         // turn the face
         if (moveValue.x != 0) {
-            print(moveValue);
             transform.localScale = new Vector3(moveValue.x/2,transform.localScale.y,transform.localScale.z);
         }
     }
@@ -86,6 +87,16 @@ public class NewPlayerMovement : MonoBehaviour
         }
 
     }
+
+    #endregion
+
+    //TODO: player attack
+
+
+    
+
+
+
 
     private void Load(){
         

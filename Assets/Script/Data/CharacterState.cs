@@ -14,12 +14,12 @@ public class CharacterState : MonoBehaviour
         get{if(CharacterData != null){return CharacterData.currentHealth;}else{return 0;}} 
         set{CharacterData.currentHealth = value;} 
     }
-    public int baseDefnce { 
-        get{if(CharacterData != null){return CharacterData.baseDefnce;}else{return 0;}} 
-        set{CharacterData.baseDefnce = value;} 
+    public int baseDefence { 
+        get{if(CharacterData != null){return CharacterData.baseDefence;}else{return 0;}} 
+        set{CharacterData.baseDefence = value;} 
     }
-    public int currentDefnce { 
-        get{if(CharacterData != null){return CharacterData.currentDefnce;}else{return 0;}} 
-        set{CharacterData.currentDefnce = value;} 
+    public int currentDefence { 
+        get{if(CharacterData != null){return CharacterData.currentDefence;}else{return 0;}} 
+        set{CharacterData.currentDefence = value;} 
     }
 }

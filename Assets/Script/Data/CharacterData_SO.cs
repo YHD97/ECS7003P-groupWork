@@ -8,8 +8,8 @@ public class CharacterData_SO : ScriptableObject {
     
     public int maxHealth;
     public int currentHealth;
-    public int baseDefnce;
-    public int currentDefnce;
+    public int baseDefence;
+    public int currentDefence;
 
 
 }
