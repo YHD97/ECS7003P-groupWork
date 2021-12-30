@@ -9,6 +9,7 @@ public class NewPlayerMovement : MonoBehaviour
     private Collider2D coll;
     private CharacterState characterState;
 
+    //Player movement
     public Transform checkGround;
     public LayerMask Platforms;
     public float speed,jumpSpeed;
@@ -19,18 +20,26 @@ public class NewPlayerMovement : MonoBehaviour
 
     public Vector2 moveValue;
 
+    void Awake() {
+        rb = GetComponent <Rigidbody2D>();
+        coll = GetComponent <Collider2D>();
+        characterState = GetComponent<CharacterState>();
+        
+    }
+
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-       rb = GetComponent <Rigidbody2D>();
-       coll = GetComponent <Collider2D>();
-       characterState = GetComponent<CharacterState>();
+       
     }
 
     void Update() {
+         if(characterState.currentHealth <= 0){
+            Destroy(gameObject);
+        }
         if((Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.Space)) && JumpCount > 0){
             JumpPressed = true;
         }
@@ -90,7 +99,8 @@ public class NewPlayerMovement : MonoBehaviour
 
     #endregion
 
-    //TODO: player attack
+    
+    
 
 
     

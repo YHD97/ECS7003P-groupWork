@@ -13,9 +13,10 @@ public class enemy_move : MonoBehaviour
    
 
     public float speed;
-    public float health;
+    
 
     private Rigidbody2D rb;
+    private CharacterState characterState;
     //bool for face is left
     private bool faceLeft = true;
     // Start is called before the first frame update
@@ -25,9 +26,11 @@ public class enemy_move : MonoBehaviour
     {
         //get the enemy position 
         rb = GetComponent <Rigidbody2D>();
+        characterState = GetComponent<CharacterState>();
         // Separating leftpoint and rightpoint from the enemy
         transform.DetachChildren();
         playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        characterState.currentHealth = 100;
         
     }
 
@@ -39,16 +42,17 @@ public class enemy_move : MonoBehaviour
             float distance = (transform.position - playerTransform.position).sqrMagnitude;
             if(distance < 5.0){
                 transform.position = Vector2.MoveTowards(transform.position,playerTransform.position,speed*Time.deltaTime);
-
+                
             }
         }
-        if(health <= 0){
+        if(characterState.currentHealth <= 0){
             Destroy(gameObject);
         }
     }
-    public void takeDamage(float damage){
-        health -= damage;
-    }
+
+    
+
+    
 
 
     #region enemy movement
