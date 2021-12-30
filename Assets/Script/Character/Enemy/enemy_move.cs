@@ -38,13 +38,8 @@ public class enemy_move : MonoBehaviour
     void Update()
     {
         EnemyMovement();
-        if(playerTransform != null){
-            float distance = (transform.position - playerTransform.position).sqrMagnitude;
-            if(distance < 5.0){
-                transform.position = Vector2.MoveTowards(transform.position,playerTransform.position,speed*Time.deltaTime);
-                
-            }
-        }
+        EnemyPursuit();
+        
         if(characterState.currentHealth <= 0){
             Destroy(gameObject);
         }
@@ -68,6 +63,7 @@ public class enemy_move : MonoBehaviour
                 transform.localScale = new Vector3(-rb.transform.localScale.x, rb.transform.localScale.y,rb.transform.localScale.z);
                 faceLeft = false;
             }
+            
         }else{
             rb.velocity = new Vector2(speed,rb.velocity.y);
             // if passed the right point position, return around
@@ -76,7 +72,19 @@ public class enemy_move : MonoBehaviour
                 transform.localScale = new Vector3(-rb.transform.localScale.x,rb.transform.localScale.y,rb.transform.localScale.z);
                 faceLeft = true;
             }
+            
         }
+    }
+
+    void EnemyPursuit(){
+        if(playerTransform != null){
+            float distance = (transform.position - playerTransform.position).sqrMagnitude;
+            if(distance < 300.0){
+                transform.position = Vector2.MoveTowards(transform.position,playerTransform.position,speed*Time.deltaTime);
+                
+            }
+        }
+
     }
     #endregion
 

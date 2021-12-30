@@ -23,8 +23,7 @@ public class NewPlayerMovement : MonoBehaviour
     void Awake() {
         rb = GetComponent <Rigidbody2D>();
         coll = GetComponent <Collider2D>();
-        characterState = GetComponent<CharacterState>();
-        
+        characterState = GetComponent<CharacterState>();    
     }
 
 
@@ -46,6 +45,9 @@ public class NewPlayerMovement : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.R)){
             Load();
 
+        }
+        if(characterState.currentHealth <= 0){
+            Destroy(gameObject);
         }
         
     }
@@ -114,6 +116,8 @@ public class NewPlayerMovement : MonoBehaviour
             //Load data
             float platerPositionX = PlayerPrefs.GetFloat("platerPositionX");
             float platerPositionY = PlayerPrefs.GetFloat("platerPositionY");
+            float playerhealth = PlayerPrefs.GetFloat("PlayerHealth");
+            print(playerhealth);
             transform.position = new Vector3(platerPositionX,platerPositionY,transform.position.z);
         }else{
             print("No data");

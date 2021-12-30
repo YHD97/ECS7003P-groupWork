@@ -15,8 +15,7 @@ public class DeathScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //collision.gameObject.tag == "enemy" ||
-        if( collision.gameObject.tag == "Trap" || collision.gameObject.tag == "Fireball" || collision.gameObject.tag == "Acid Drop"){
+        if(collision.gameObject.tag == "enemy" || collision.gameObject.tag == "Trap" || collision.gameObject.tag == "Fireball" || collision.gameObject.tag == "Acid Drop"){
             if(collision.gameObject.tag == "Fireball" || collision.gameObject.tag == "Acid Drop"){
                 Destroy(collision.gameObject);
             }

@@ -7202,7 +7202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1172493118}
-  playerData: {fileID: 0}
+  playerData: {fileID: 1459013907}
 --- !u!4 &1140729046 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3031689906307193163, guid: effcaff1bff0b9f4c92612bc2815f792, type: 3}
