@@ -27,13 +27,12 @@ public class DeathScript : MonoBehaviour
             this.gameObject.SetActive(false);
             // Restart the level
             Invoke("restartLevel", 2);
-        }
-
-        
+        }  
     }
 
     private void restartLevel() 
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); // loads current scene
+       
     }
 }

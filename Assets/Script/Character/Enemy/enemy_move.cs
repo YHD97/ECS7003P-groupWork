@@ -75,7 +75,7 @@ public class enemy_move : MonoBehaviour
             
         }
     }
-
+    //the enemy pursuit function
     void EnemyPursuit(){
         if(playerTransform != null){
             float distance = (transform.position - playerTransform.position).sqrMagnitude;

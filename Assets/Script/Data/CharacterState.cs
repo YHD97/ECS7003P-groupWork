@@ -33,6 +33,16 @@ public class CharacterState : MonoBehaviour
         set{CharacterData.currentDefence = value;} 
     }
 
+    public float playerPositionX { 
+        get{if(CharacterData != null){return CharacterData.playerPositionX;}else{return 0.0f;}} 
+        set{CharacterData.playerPositionX = value;} 
+    }
+
+    public float playerPositionY { 
+        get{if(CharacterData != null){return CharacterData.playerPositionY;}else{return 0.0f;}} 
+        set{CharacterData.playerPositionY = value;} 
+    }
+
     // take damage
     public void takeDamage(CharacterState Attacker,CharacterState defener){
         int damage = Mathf.Max(Attacker.CurrentDamage()-defener.currentDefence,0);

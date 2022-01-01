@@ -20,11 +20,7 @@ public class NewPlayerMovement : MonoBehaviour
 
     public Vector2 moveValue;
 
-    void Awake() {
-        rb = GetComponent <Rigidbody2D>();
-        coll = GetComponent <Collider2D>();
-        characterState = GetComponent<CharacterState>();    
-    }
+    
 
 
 
@@ -32,23 +28,39 @@ public class NewPlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+       rb = GetComponent <Rigidbody2D>();
+       coll = GetComponent <Collider2D>();
+       characterState = GetComponent<CharacterState>(); 
+       GameManager.Instance.RegisterPlayer(characterState);  
+       //set base state for player 
+       characterState.currentHealth = 100;
+       // if data not null, set saved state 
+       SaveManager.Instance.LoadPlayerData();
+       transform.position = new Vector3(characterState.playerPositionX,characterState.playerPositionY,transform.position.z);
+
     }
 
     void Update() {
-         if(characterState.currentHealth <= 0){
-            Destroy(gameObject);
-        }
-        if((Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.Space)) && JumpCount > 0){
-            JumpPressed = true;
-        }
-        if(Input.GetKeyDown(KeyCode.R)){
-            Load();
-
-        }
+        //update the player position
+        characterState.playerPositionX = transform.position.x;
+        characterState.playerPositionY = transform.position.y;
+         
+        // if health is 0, player deadth
         if(characterState.currentHealth <= 0){
             Destroy(gameObject);
         }
+
+        //Jump system
+        if((Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.Space)) && JumpCount > 0){
+            JumpPressed = true;
+        }
+
+        // reload the data
+        if(Input.GetKeyDown(KeyCode.R)){
+            SaveManager.Instance.LoadPlayerData();
+
+        }
+        
         
     }
 
@@ -105,23 +117,4 @@ public class NewPlayerMovement : MonoBehaviour
     
 
 
-    
-
-
-
-
-    private void Load(){
-        
-        if(PlayerPrefs.HasKey("platerPositionX")){
-            //Load data
-            float platerPositionX = PlayerPrefs.GetFloat("platerPositionX");
-            float platerPositionY = PlayerPrefs.GetFloat("platerPositionY");
-            float playerhealth = PlayerPrefs.GetFloat("PlayerHealth");
-            print(playerhealth);
-            transform.position = new Vector3(platerPositionX,platerPositionY,transform.position.z);
-        }else{
-            print("No data");
-        }
-        
-    }
 }

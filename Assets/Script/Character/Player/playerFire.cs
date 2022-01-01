@@ -5,8 +5,6 @@ using UnityEngine;
 public class playerFire : MonoBehaviour
 {
     public float speed;
-    public float minDamage;
-    public float maxDamage;
     private Rigidbody2D rb;
     private Transform playerTransform;
     private Transform fireBallTransform;

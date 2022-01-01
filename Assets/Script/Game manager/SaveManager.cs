@@ -9,24 +9,36 @@ public class SaveManager : Singleton<SaveManager>
         base.Awake();
         DontDestroyOnLoad(this);
     }
-    void Update() {
-        if(Input.GetKeyDown(KeyCode.B)){
-            //Save(GameManager.Instantiate.playerStates.chara)
+    
+    // save data
+    public void SavePlayerData(){
+        Save(GameManager.Instance.playerStates.CharacterData,GameManager.Instance.playerStates.CharacterData.name);
+        print("data save");
+        
 
-        }
-        if(Input.GetKeyDown(KeyCode.N)){
-            
-        }
     }
+
+    //Load data
+    public void LoadPlayerData(){
+        Load(GameManager.Instance.playerStates.CharacterData,GameManager.Instance.playerStates.CharacterData.name);
+        print("data Load");
+
+    }
+
+    // Convert data to json data and save
     public void Save(Object data, string key){
         var jsonData = JsonUtility.ToJson(data);
         PlayerPrefs.SetString(key,jsonData);
         PlayerPrefs.Save();
 
     }
+
+    // Load data from json data
     public void Load(Object data, string key){
         if(PlayerPrefs.HasKey(key)){
             JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString(key),data);
+        }else{
+            print("No data");
         }
     }
 }

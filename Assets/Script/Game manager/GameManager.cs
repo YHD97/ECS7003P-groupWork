@@ -5,8 +5,9 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager> 
 {
     public CharacterState playerStates;
+   
     
-    private void RegisterPlayer(CharacterState player){
+    public void RegisterPlayer(CharacterState player){
         playerStates = player;
 
     }
