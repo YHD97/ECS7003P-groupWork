@@ -13,9 +13,10 @@ public class enemy_move : MonoBehaviour
    
 
     public float speed;
-    public float health;
+    
 
     private Rigidbody2D rb;
+    private CharacterState characterState;
     //bool for face is left
     private bool faceLeft = true;
     // Start is called before the first frame update
@@ -25,9 +26,11 @@ public class enemy_move : MonoBehaviour
     {
         //get the enemy position 
         rb = GetComponent <Rigidbody2D>();
+        characterState = GetComponent<CharacterState>();
         // Separating leftpoint and rightpoint from the enemy
         transform.DetachChildren();
         playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        characterState.currentHealth = 100;
         
     }
 
@@ -35,20 +38,16 @@ public class enemy_move : MonoBehaviour
     void Update()
     {
         EnemyMovement();
-        if(playerTransform != null){
-            float distance = (transform.position - playerTransform.position).sqrMagnitude;
-            if(distance < 5.0){
-                transform.position = Vector2.MoveTowards(transform.position,playerTransform.position,speed*Time.deltaTime);
-
-            }
-        }
-        if(health <= 0){
+        EnemyPursuit();
+        
+        if(characterState.currentHealth <= 0){
             Destroy(gameObject);
         }
     }
-    public void takeDamage(float damage){
-        health -= damage;
-    }
+
+    
+
+    
 
 
     #region enemy movement
@@ -64,6 +63,7 @@ public class enemy_move : MonoBehaviour
                 transform.localScale = new Vector3(-rb.transform.localScale.x, rb.transform.localScale.y,rb.transform.localScale.z);
                 faceLeft = false;
             }
+            
         }else{
             rb.velocity = new Vector2(speed,rb.velocity.y);
             // if passed the right point position, return around
@@ -72,7 +72,19 @@ public class enemy_move : MonoBehaviour
                 transform.localScale = new Vector3(-rb.transform.localScale.x,rb.transform.localScale.y,rb.transform.localScale.z);
                 faceLeft = true;
             }
+            
         }
+    }
+    //the enemy pursuit function
+    void EnemyPursuit(){
+        if(playerTransform != null){
+            float distance = (transform.position - playerTransform.position).sqrMagnitude;
+            if(distance < 300.0){
+                transform.position = Vector2.MoveTowards(transform.position,playerTransform.position,speed*Time.deltaTime);
+                
+            }
+        }
+
     }
     #endregion
 

@@ -10,6 +10,11 @@ public class CharacterData_SO : ScriptableObject {
     public int currentHealth;
     public int baseDefence;
     public int currentDefence;
+    public float minDamage;
+    public float maxDamage;
+    public float playerPositionX;
+    public float playerPositionY;
+
 
 
 }

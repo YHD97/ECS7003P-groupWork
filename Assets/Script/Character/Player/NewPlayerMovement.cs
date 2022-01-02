@@ -9,6 +9,7 @@ public class NewPlayerMovement : MonoBehaviour
     private Collider2D coll;
     private CharacterState characterState;
 
+    //Player movement
     public Transform checkGround;
     public LayerMask Platforms;
     public float speed,jumpSpeed;
@@ -19,6 +20,8 @@ public class NewPlayerMovement : MonoBehaviour
 
     public Vector2 moveValue;
 
+    
+
 
 
 
@@ -27,17 +30,37 @@ public class NewPlayerMovement : MonoBehaviour
     {
        rb = GetComponent <Rigidbody2D>();
        coll = GetComponent <Collider2D>();
-       characterState = GetComponent<CharacterState>();
+       characterState = GetComponent<CharacterState>(); 
+       GameManager.Instance.RegisterPlayer(characterState);  
+       //set base state for player 
+       characterState.currentHealth = 100;
+       // if data not null, set saved state 
+       SaveManager.Instance.LoadPlayerData();
+       transform.position = new Vector3(characterState.playerPositionX,characterState.playerPositionY,transform.position.z);
+
     }
 
     void Update() {
+        //update the player position
+        characterState.playerPositionX = transform.position.x;
+        characterState.playerPositionY = transform.position.y;
+         
+        // if health is 0, player deadth
+        if(characterState.currentHealth <= 0){
+            Destroy(gameObject);
+        }
+
+        //Jump system
         if((Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.Space)) && JumpCount > 0){
             JumpPressed = true;
         }
+
+        // reload the data
         if(Input.GetKeyDown(KeyCode.R)){
-            Load();
+            SaveManager.Instance.LoadPlayerData();
 
         }
+        
         
     }
 
@@ -90,24 +113,8 @@ public class NewPlayerMovement : MonoBehaviour
 
     #endregion
 
-    //TODO: player attack
-
-
+    
     
 
 
-
-
-    private void Load(){
-        
-        if(PlayerPrefs.HasKey("platerPositionX")){
-            //Load data
-            float platerPositionX = PlayerPrefs.GetFloat("platerPositionX");
-            float platerPositionY = PlayerPrefs.GetFloat("platerPositionY");
-            transform.position = new Vector3(platerPositionX,platerPositionY,transform.position.z);
-        }else{
-            print("No data");
-        }
-        
-    }
 }
