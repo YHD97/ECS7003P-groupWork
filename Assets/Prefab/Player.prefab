@@ -164,9 +164,9 @@ MonoBehaviour:
     m_Bits: 8
   speed: 10
   jumpSpeed: 15
-  timeVal: 0
   isGround: 1
   isJump: 0
+  moveValue: {x: 0, y: 0}
 --- !u!114 &8420414973578802849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,6 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameoverText: {fileID: 0}
+  deathParticles: {fileID: 0}
 --- !u!1 &8420414974684146162
 GameObject:
   m_ObjectHideFlags: 0
