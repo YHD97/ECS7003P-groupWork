@@ -10,4 +10,5 @@ public static class GameSettings
 
     public static float Gamma { get; set; } = 1.0f;
     public static bool ShowCountdownOnLevelStart { get; set; } = true;
+    public static bool startGame { get; set; } = true;
 }

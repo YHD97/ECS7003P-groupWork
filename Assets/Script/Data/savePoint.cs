@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class savePoint : MonoBehaviour
 {
-    public Transform player;
+   
     private bool canSave;
     public CharacterState playerData;
      
