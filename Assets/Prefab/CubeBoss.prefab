@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4624227441417979145}
   - component: {fileID: 4624227441417979144}
   - component: {fileID: 4624227441417979143}
+  - component: {fileID: 3632126966596407177}
   m_Layer: 0
   m_Name: CubeBoss
   m_TagString: enemy
@@ -161,6 +162,20 @@ MonoBehaviour:
   rightPoint: {fileID: 4624227442128109323}
   speed: 5
   gameoverText: {fileID: 0}
+--- !u!114 &3632126966596407177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4624227441417979141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3825f4c783dc4e19a8a123650ca6cae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  templateData: {fileID: 11400000, guid: 160c5eff6449249709545feb7cc29d39, type: 2}
+  CharacterData: {fileID: 0}
 --- !u!1 &4624227442128109322
 GameObject:
   m_ObjectHideFlags: 0

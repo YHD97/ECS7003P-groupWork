@@ -12,14 +12,23 @@ public class CountdownController : MonoBehaviour
     public string cameraScriptName;
     public GameObject player;
     public string playerScript;
+    
     // Start is called before the first frame update
     void Start()
     {
+        
         if(GameSettings.ShowCountdownOnLevelStart)
         {
-            (camera.GetComponent(cameraScriptName) as MonoBehaviour).enabled = false;
-            (player.GetComponent(playerScript) as MonoBehaviour).enabled = false;
-            StartCoroutine(CountdownToStart());
+           if(GameSettings.startGame ){
+                (camera.GetComponent(cameraScriptName) as MonoBehaviour).enabled = false;
+                (player.GetComponent(playerScript) as MonoBehaviour).enabled = false;
+                StartCoroutine(CountdownToStart());
+                GameSettings.startGame = false;
+           }else{
+                (camera.GetComponent(cameraScriptName) as MonoBehaviour).enabled = true;
+                (player.GetComponent(playerScript) as MonoBehaviour).enabled = true;
+                rules.SetActive(false);
+           }
         } else {
             rules.SetActive(false);
         }
