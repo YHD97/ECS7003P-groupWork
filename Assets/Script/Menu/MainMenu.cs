@@ -23,6 +23,12 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void playTutorial() 
+    {
+        // Load the first level
+        SceneManager.LoadScene(3);
+    }
+
     public void backToMainMenu(GameObject currentObject)
     {
         // Set current object as false and main menu as true
