@@ -20,9 +20,8 @@ public class DoorScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Player"){
-            Destroy(collision.gameObject);
             completeText.text = "YOU HAVE COMPLETED THE LEVEL!";
-            Invoke("nextLevel", 5);
+            Invoke("nextLevel", 3);
         }
     }
 
