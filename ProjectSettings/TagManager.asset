@@ -9,6 +9,7 @@ TagManager:
   - Trap
   - Fireball
   - Acid Drop
+  - CVDFilter
   layers:
   - Default
   - TransparentFX
