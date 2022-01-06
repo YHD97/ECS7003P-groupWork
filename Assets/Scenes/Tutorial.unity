@@ -5952,7 +5952,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6827903937616420243, guid: 6bddf59962e3ca5429c52ddef0fdec53, type: 3}
       propertyPath: visionType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bddf59962e3ca5429c52ddef0fdec53, type: 3}
