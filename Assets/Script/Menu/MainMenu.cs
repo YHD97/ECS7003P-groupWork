@@ -19,6 +19,9 @@ public class MainMenu : MonoBehaviour
         //Delate All save data
         PlayerPrefs.DeleteAll();
 
+        // Save current level
+        GlobalPrefs.SaveCurrentLevel(1);
+
         // Load the first level
         SceneManager.LoadScene(1);
     }
@@ -27,6 +30,15 @@ public class MainMenu : MonoBehaviour
     {
         // Load the first level
         SceneManager.LoadScene(3);
+    }
+
+    public void loadGame() 
+    {
+        // Load game from checkpoint
+        int level = GlobalPrefs.LoadCurrentLevel();
+        if (level != 0) {
+            SceneManager.LoadScene(level);
+        }
     }
 
     public void backToMainMenu(GameObject currentObject)
