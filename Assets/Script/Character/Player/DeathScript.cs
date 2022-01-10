@@ -10,6 +10,7 @@ public class DeathScript : MonoBehaviour
 {
     public Text gameoverText;
     public GameObject deathParticles;
+    public AudioSource sfxDeath;
 
     private GameObject instantiatedParticles;
 
@@ -21,6 +22,11 @@ public class DeathScript : MonoBehaviour
             }
             // Instantiate splatter particles on death.
             instantiatedParticles = Instantiate(deathParticles, gameObject.transform.position, gameObject.transform.rotation);
+            // Play death audio effect
+            if(sfxDeath != null){
+                sfxDeath.Play();
+            }
+            // Destroy particles
             Destroy(instantiatedParticles, 5.0f);
             // Show game over
             gameoverText.text = "GAME OVER!";

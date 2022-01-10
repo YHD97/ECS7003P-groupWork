@@ -15,6 +15,7 @@ public class NewPlayerMovement : MonoBehaviour
     public float speed,jumpSpeed;
     
     public bool isGround,isJump;
+    public AudioSource sfxJump;
     bool JumpPressed;
     int JumpCount;
 
@@ -97,6 +98,10 @@ public class NewPlayerMovement : MonoBehaviour
         }
         // check if it is pressed the key, if pressed, then jump
         if(JumpPressed && isGround){
+            if(sfxJump != null)
+            {
+                sfxJump.Play();
+            }
             isJump = true;
             rb.velocity = new Vector2(rb.velocity.x,jumpSpeed);
             JumpCount--;

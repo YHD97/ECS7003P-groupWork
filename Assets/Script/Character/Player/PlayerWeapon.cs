@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerWeapon : MonoBehaviour
 {
     public GameObject fireball;
+    public AudioSource sfxFireball;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,10 @@ public class PlayerWeapon : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.J)){
+            if(sfxFireball != null)
+            {
+                sfxFireball.PlayOneShot(sfxFireball.clip);
+            }
             fire();
         }
     }
