@@ -11,6 +11,7 @@ using UnityEngine.SceneManagement;
 public class DoorScript : MonoBehaviour
 {
     public Text completeText;
+    public AudioSource sfxNextLevel;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,9 @@ public class DoorScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Player"){
+            if(sfxNextLevel != null){
+                sfxNextLevel.Play();
+            }
             completeText.text = "YOU HAVE COMPLETED THE LEVEL!";
             Invoke("nextLevel", 3);
         }

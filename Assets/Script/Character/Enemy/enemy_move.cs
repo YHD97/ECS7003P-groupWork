@@ -10,6 +10,7 @@ public class enemy_move : MonoBehaviour
    
     public Transform leftPoint;
     public Transform rightPoint;
+    public AudioSource sfxDeath;
    
 
     public float speed;
@@ -41,6 +42,10 @@ public class enemy_move : MonoBehaviour
         EnemyPursuit();
         
         if(characterState.currentHealth <= 0){
+            if(sfxDeath != null)
+            {
+                sfxDeath.PlayOneShot(sfxDeath.clip);
+            }
             Destroy(gameObject);
         }
     }
