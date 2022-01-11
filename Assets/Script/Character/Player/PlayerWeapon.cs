@@ -6,6 +6,9 @@ public class PlayerWeapon : MonoBehaviour
 {
     public GameObject fireball;
     public AudioSource sfxFireball;
+    public int destroyFireballTime;
+    private GameObject fireball2;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +25,11 @@ public class PlayerWeapon : MonoBehaviour
             }
             fire();
         }
+        
     }
     
     void fire(){
-        Instantiate(fireball,transform.position,transform.rotation);
+        fireball2 = Instantiate(fireball,transform.position,transform.rotation);
+        Destroy(fireball2,destroyFireballTime);
     }
 }

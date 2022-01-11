@@ -41,6 +41,7 @@ public class enemy_move : MonoBehaviour
         EnemyMovement();
         EnemyPursuit();
         
+        
         if(characterState.currentHealth <= 0){
             if(sfxDeath != null)
             {
@@ -49,10 +50,6 @@ public class enemy_move : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    
-
-    
 
 
     #region enemy movement
@@ -92,6 +89,15 @@ public class enemy_move : MonoBehaviour
 
     }
     #endregion
+
+    void OnTriggerEnter2D(Collider2D other) {
+        if(other.gameObject.CompareTag("Player")){
+            // find the enemy states
+            var targetStates = other.GetComponent<NewPlayerMovement>().GetComponent<CharacterState>();
+            // make the damage
+            targetStates.takeDamage(characterState,targetStates);
+        }
+    }
 
 
 }
