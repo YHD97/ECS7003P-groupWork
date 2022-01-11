@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: CubeBossData
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 0
+  currentHealth: 100
   baseDefence: 0
   currentDefence: 0
   minDamage: 10
   maxDamage: 20
+  playerPositionX: 0
+  playerPositionY: 0

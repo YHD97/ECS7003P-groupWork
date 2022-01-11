@@ -43,7 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 835b120fb027447279aeadf1e4eeff34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireball: {fileID: 0}
+  fireball: {fileID: 4395554151786366638, guid: ac9d2d6b3202e4852a6a78b9c9034562, type: 3}
+  sfxFireball: {fileID: 0}
 --- !u!1 &8420414973578802872
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,6 +212,7 @@ MonoBehaviour:
   jumpSpeed: 15
   isGround: 1
   isJump: 0
+  sfxJump: {fileID: 0}
   moveValue: {x: 0, y: 0}
 --- !u!114 &8420414973578802849
 MonoBehaviour:
@@ -256,6 +258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameoverText: {fileID: 0}
   deathParticles: {fileID: 0}
+  sfxDeath: {fileID: 0}
 --- !u!1 &8420414974684146162
 GameObject:
   m_ObjectHideFlags: 0

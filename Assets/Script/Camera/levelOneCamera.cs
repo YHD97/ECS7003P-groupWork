@@ -5,9 +5,17 @@ using UnityEngine;
 public class levelOneCamera : MonoBehaviour
 {
     public Transform player;
+    public Vector2 minPosition;
+    public Vector2 maxPosition;
     // Update is called once per frame
     void Update()
-    {
-        transform.position = new Vector3(player.position.x,player.position.y,-10f);
+    {  
+        if(player.position != null){
+            Vector3 playerPosition = player.position;
+            playerPosition.x = Mathf.Clamp(playerPosition.x,minPosition.x,maxPosition.x);
+            playerPosition.y = Mathf.Clamp(playerPosition.y,minPosition.y,maxPosition.y);
+            transform.position = new Vector3(playerPosition.x,playerPosition.y,-10f);
+        }
+        
     }
 }
