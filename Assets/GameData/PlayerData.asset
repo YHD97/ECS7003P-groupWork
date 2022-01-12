@@ -18,5 +18,5 @@ MonoBehaviour:
   currentDefence: 0
   minDamage: 10
   maxDamage: 20
-  playerPositionX: -60
-  playerPositionY: 3
+  playerPositionX: -62
+  playerPositionY: -43

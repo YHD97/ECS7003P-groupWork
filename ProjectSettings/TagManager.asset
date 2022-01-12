@@ -10,6 +10,7 @@ TagManager:
   - Fireball
   - Acid Drop
   - CVDFilter
+  - MagicHat
   layers:
   - Default
   - TransparentFX
