@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MagicChange : MonoBehaviour
+public class magicchange : MonoBehaviour
 {
 
     private Animator anim;
