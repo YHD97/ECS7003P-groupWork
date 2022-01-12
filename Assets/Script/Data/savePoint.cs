@@ -7,6 +7,8 @@ public class savePoint : MonoBehaviour
    
     private bool canSave;
     public CharacterState playerData;
+    public GameObject savedSprite;
+    public GameObject particles;
      
    
     
@@ -23,6 +25,7 @@ public class savePoint : MonoBehaviour
         // push E to save data in save point
         if(Input.GetKeyDown(KeyCode.E)){
             if(canSave){
+                savedSprite.SetActive(true);
                 SaveManager.Instance.SavePlayerData();
             }
             
@@ -40,6 +43,8 @@ public class savePoint : MonoBehaviour
     void OnTriggerExit2D(Collider2D other) {
         if(other.gameObject.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.BoxCollider2D"){
             canSave = false;
+            savedSprite.SetActive(false);
+            particles.SetActive(false);
         } 
     }
     
