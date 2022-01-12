@@ -34,7 +34,8 @@ public class playerFire : MonoBehaviour
 
     }
     void OnTriggerEnter2D(Collider2D other) {
-        if(other.gameObject.CompareTag("enemy")){
+        if(other.gameObject.CompareTag("enemy") || other.gameObject.CompareTag("Boss"))
+        {
             // find the enemy states
             var targetStates = other.GetComponent<enemy_move>().GetComponent<CharacterState>();
             // make the damage
