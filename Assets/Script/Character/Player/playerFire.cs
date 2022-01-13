@@ -16,7 +16,6 @@ public class playerFire : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         characterState = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterState>();
-        
         playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         fireBallTransform = GetComponent<Transform>();
         if(playerTransform.localScale.x >0){

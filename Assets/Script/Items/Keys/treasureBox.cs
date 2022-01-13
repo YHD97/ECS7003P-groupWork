@@ -10,18 +10,24 @@ public class treasureBox : MonoBehaviour
     private bool canOpen;
     private bool isOpened;
     private Animator anim;
+    private CharacterState characterState;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
         isOpened = false;
+        characterState = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterState>();
+
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(characterState.getKey != 0){
+            anim.SetTrigger("Opening");
+            canOpen = false;
+        }
         if(Input.GetKeyDown(KeyCode.E)){
             if(canOpen && !isOpened){
                 anim.SetTrigger("Opening");

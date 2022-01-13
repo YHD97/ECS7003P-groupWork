@@ -1232,6 +1232,10 @@ PrefabInstance:
       propertyPath: sfxDeath
       value: 
       objectReference: {fileID: 1951491610}
+    - target: {fileID: 4624227441417979143, guid: 6d5d66ad82605444b8ab172a95e5802c, type: 3}
+      propertyPath: startWaitTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4624227442128109323, guid: 6d5d66ad82605444b8ab172a95e5802c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.53
@@ -1506,6 +1510,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b94ba9b6389798a45888afa8763b0b54, type: 3}
+--- !u!4 &117641168 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 449326469219270427, guid: 6d5d66ad82605444b8ab172a95e5802c, type: 3}
+  m_PrefabInstance: {fileID: 375629047}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &118377159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4166,11 +4175,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8420414973578802850, guid: 70753c7456e14d146a54df0337e23e2d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -57.99
+      value: -40.4
       objectReference: {fileID: 0}
     - target: {fileID: 8420414973578802850, guid: 70753c7456e14d146a54df0337e23e2d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.12
+      value: 94.3
       objectReference: {fileID: 0}
     - target: {fileID: 8420414973578802850, guid: 70753c7456e14d146a54df0337e23e2d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4448,6 +4457,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1289024277}
     m_Modifications:
+    - target: {fileID: 449326469219270427, guid: 6d5d66ad82605444b8ab172a95e5802c, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4264179364394990400, guid: 6d5d66ad82605444b8ab172a95e5802c, type: 3}
+      propertyPath: sfxDeath
+      value: 
+      objectReference: {fileID: 1951491610}
     - target: {fileID: 4624227441417979141, guid: 6d5d66ad82605444b8ab172a95e5802c, type: 3}
       propertyPath: m_Name
       value: CubeBoss
@@ -4508,9 +4525,17 @@ PrefabInstance:
       propertyPath: sfxDeath
       value: 
       objectReference: {fileID: 1951491610}
+    - target: {fileID: 4624227441417979143, guid: 6d5d66ad82605444b8ab172a95e5802c, type: 3}
+      propertyPath: movePosition
+      value: 
+      objectReference: {fileID: 117641168}
+    - target: {fileID: 4624227441417979143, guid: 6d5d66ad82605444b8ab172a95e5802c, type: 3}
+      propertyPath: startWaitTime
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4624227442128109323, guid: 6d5d66ad82605444b8ab172a95e5802c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.65
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4624227442415174129, guid: 6d5d66ad82605444b8ab172a95e5802c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4585,6 +4610,10 @@ PrefabInstance:
       propertyPath: sfxDeath
       value: 
       objectReference: {fileID: 1951491610}
+    - target: {fileID: 4624227441417979143, guid: 6d5d66ad82605444b8ab172a95e5802c, type: 3}
+      propertyPath: startWaitTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4624227442128109323, guid: 6d5d66ad82605444b8ab172a95e5802c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.89
@@ -7465,6 +7494,10 @@ PrefabInstance:
       propertyPath: sfxDeath
       value: 
       objectReference: {fileID: 1951491610}
+    - target: {fileID: 4624227441417979143, guid: 6d5d66ad82605444b8ab172a95e5802c, type: 3}
+      propertyPath: startWaitTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4624227441417979147, guid: 6d5d66ad82605444b8ab172a95e5802c, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -8893,7 +8926,7 @@ PrefabInstance:
     - target: {fileID: 3733463045052868603, guid: 453eb3a77f2f875448ff825ca68adfa4, type: 3}
       propertyPath: globalLight
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1299565674}
     - target: {fileID: 3733463045091611998, guid: 453eb3a77f2f875448ff825ca68adfa4, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -9260,11 +9293,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3178068119074509158, guid: 2656e9e4041424ee2be19ff9622cc82d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -66.62
+      value: -78.3
       objectReference: {fileID: 0}
     - target: {fileID: 3178068119074509158, guid: 2656e9e4041424ee2be19ff9622cc82d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -46
+      value: -35.9
       objectReference: {fileID: 0}
     - target: {fileID: 3178068119074509158, guid: 2656e9e4041424ee2be19ff9622cc82d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9372,6 +9405,10 @@ PrefabInstance:
       propertyPath: sfxDeath
       value: 
       objectReference: {fileID: 1951491610}
+    - target: {fileID: 4624227441417979143, guid: 6d5d66ad82605444b8ab172a95e5802c, type: 3}
+      propertyPath: startWaitTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4624227442128109323, guid: 6d5d66ad82605444b8ab172a95e5802c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.41
@@ -18626,6 +18663,10 @@ PrefabInstance:
       propertyPath: sfxDeath
       value: 
       objectReference: {fileID: 1951491610}
+    - target: {fileID: 4624227441417979143, guid: 6d5d66ad82605444b8ab172a95e5802c, type: 3}
+      propertyPath: startWaitTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4624227442128109323, guid: 6d5d66ad82605444b8ab172a95e5802c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.17
@@ -19352,10 +19393,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1685023126}
   - component: {fileID: 1685023125}
-  - component: {fileID: 1685023124}
   - component: {fileID: 1685023123}
   - component: {fileID: 1685023122}
   - component: {fileID: 1685023127}
+  - component: {fileID: 1685023124}
   m_Layer: 10
   m_Name: treasure_box
   m_TagString: Untagged
@@ -19426,9 +19467,9 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 0
-  m_CollisionDetection: 1
-  m_Constraints: 4
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!212 &1685023125
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19489,7 +19530,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685023121}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -38.1, y: 94.7, z: 0}
+  m_LocalPosition: {x: -38.1, y: 94.7, z: -0.3}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 1003160525}
@@ -22156,6 +22197,10 @@ PrefabInstance:
       propertyPath: sfxDeath
       value: 
       objectReference: {fileID: 1951491610}
+    - target: {fileID: 4624227441417979143, guid: 6d5d66ad82605444b8ab172a95e5802c, type: 3}
+      propertyPath: startWaitTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4624227442128109323, guid: 6d5d66ad82605444b8ab172a95e5802c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

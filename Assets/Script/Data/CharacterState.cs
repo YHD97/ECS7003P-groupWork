@@ -42,6 +42,15 @@ public class CharacterState : MonoBehaviour
         get{if(CharacterData != null){return CharacterData.playerPositionY;}else{return 0.0f;}} 
         set{CharacterData.playerPositionY = value;} 
     }
+    public int getKey { 
+        get{if(CharacterData != null){return CharacterData.getKey;}else{return 0;}} 
+        set{CharacterData.getKey = value;} 
+    }
+
+    public bool getWeapon { 
+        get{if(CharacterData != null){return CharacterData.getWeapon;}else{return false;}} 
+        set{CharacterData.getWeapon = value;} 
+    }
 
     // take damage
     public void takeDamage(CharacterState Attacker,CharacterState defener){

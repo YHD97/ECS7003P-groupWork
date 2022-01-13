@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class enemy_move : MonoBehaviour
 {
@@ -14,34 +15,54 @@ public class enemy_move : MonoBehaviour
    
 
     public float speed;
+    public float startWaitTime;
+    private float waitTime;
+    public float playerToEnemy;
     
 
     private Rigidbody2D rb;
+    private Transform playerTransform;
     private CharacterState characterState;
-    //bool for face is left
-    private bool faceLeft = true;
+    
     // Start is called before the first frame update
     public Text gameoverText;
-    private Transform playerTransform;
-    void Start()
+    public Transform movePosition;
+    
+    public void Start()
     {
         //get the enemy position 
         rb = GetComponent <Rigidbody2D>();
         characterState = GetComponent<CharacterState>();
         // Separating leftpoint and rightpoint from the enemy
         transform.DetachChildren();
-        playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         characterState.currentHealth = 100;
-        
+        playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+
+        waitTime = startWaitTime;
+        movePosition.position = getRandomPosition();        
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
+        //the enemy pursuit function
+        if(playerTransform != null){
+            float distance = (transform.position - playerTransform.position).sqrMagnitude;
+            if(distance < playerToEnemy*playerToEnemy){
+                movePosition.position = new Vector2(playerTransform.position.x,playerTransform.position.y);
+            }
+        }
+        // Check the face direction
+        if (rb.transform.position.x < movePosition.transform.position.x){
+            transform.localScale = new Vector3(-Mathf.Abs(rb.transform.localScale.x), rb.transform.localScale.y,rb.transform.localScale.z);
+        }else{
+            transform.localScale = new Vector3(Mathf.Abs(rb.transform.localScale.x), rb.transform.localScale.y,rb.transform.localScale.z);
+
+        }
+
         EnemyMovement();
-        EnemyPursuit();
         
-        
+        //enemy died soud
         if(characterState.currentHealth <= 0){
             if(sfxDeath != null)
             {
@@ -55,41 +76,25 @@ public class enemy_move : MonoBehaviour
     #region enemy movement
     void EnemyMovement()
     {
-        // if enemy face left
-        if (faceLeft)
-        {
-            rb.velocity = new Vector2(-speed,rb.velocity.y);
-            // if passed the left point position, return around
-            if (transform.position.x < leftPoint.position.x)
-            {
-                transform.localScale = new Vector3(-rb.transform.localScale.x, rb.transform.localScale.y,rb.transform.localScale.z);
-                faceLeft = false;
+        transform.position = Vector2.MoveTowards(transform.position, movePosition.position,7.0f*Time.deltaTime);
+        if(Vector2.Distance(transform.position,movePosition.position) < 0.1f){
+            if(waitTime<=0){
+                movePosition.position = getRandomPosition();
+                waitTime = startWaitTime;
+            }else{
+                waitTime -= Time.deltaTime; 
             }
-            
-        }else{
-            rb.velocity = new Vector2(speed,rb.velocity.y);
-            // if passed the right point position, return around
-            if (transform.position.x > rightPoint.position.x)
-            {
-                transform.localScale = new Vector3(-rb.transform.localScale.x,rb.transform.localScale.y,rb.transform.localScale.z);
-                faceLeft = true;
-            }
-            
-        }
+        } 
     }
-    //the enemy pursuit function
-    void EnemyPursuit(){
-        if(playerTransform != null){
-            float distance = (transform.position - playerTransform.position).sqrMagnitude;
-            if(distance < 300.0){
-                transform.position = Vector2.MoveTowards(transform.position,playerTransform.position,speed*Time.deltaTime);
-                
-            }
-        }
-
+    // get a random point for enemy next move
+    Vector2 getRandomPosition(){
+        Vector2 rndPosition = new Vector2(Random.Range(leftPoint.position.x,rightPoint.position.x),transform.position.y);
+        return rndPosition;
     }
+    
     #endregion
 
+    // enemy attack
     void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Player")){
             // find the enemy states
