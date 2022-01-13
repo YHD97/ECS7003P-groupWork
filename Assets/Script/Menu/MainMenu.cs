@@ -26,6 +26,18 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void playGameHarder() 
+    {
+        //Delate All save data
+        PlayerPrefs.DeleteAll();
+
+        // Save current level
+        GlobalPrefs.SaveCurrentLevel(4);
+
+        // Load the first level
+        SceneManager.LoadScene(4);
+    }
+
     public void playTutorial() 
     {
         // Load the first level

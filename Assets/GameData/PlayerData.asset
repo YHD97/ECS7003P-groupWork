@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 100
-  baseDefence: 0
-  currentDefence: 0
+  baseDefence: 5
+  currentDefence: 5
   minDamage: 10
   maxDamage: 20
   playerPositionX: -60.9
