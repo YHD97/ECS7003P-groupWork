@@ -22,6 +22,7 @@ public class keys : MonoBehaviour
             //get the key and key number +1
             KeyUI.CurrentKeyQuantity +=1;
             Destroy(gameObject);
+            
 
         }
     }

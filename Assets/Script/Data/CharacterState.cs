@@ -48,7 +48,7 @@ public class CharacterState : MonoBehaviour
     }
 
     public bool getWeapon { 
-        get{if(CharacterData != null){return CharacterData.getWeapon;}else{return false;}} 
+        get{if(CharacterData != null){return CharacterData.getWeapon;}else{return true;}} 
         set{CharacterData.getWeapon = value;} 
     }
 
