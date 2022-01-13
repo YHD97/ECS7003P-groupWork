@@ -12,6 +12,8 @@ TagManager:
   - CVDFilter
   - BigBoss
   - BigBossWeapon
+  - MagicHat
+  - Boss
   layers:
   - Default
   - TransparentFX
