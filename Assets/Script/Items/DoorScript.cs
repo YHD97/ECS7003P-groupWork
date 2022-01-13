@@ -12,20 +12,27 @@ public class DoorScript : MonoBehaviour
 {
     public Text completeText;
     public AudioSource sfxNextLevel;
+    private CharacterState characterState;
     // Start is called before the first frame update
     void Start()
     {
         completeText.text = "";
+        characterState = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterState>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Player"){
-            if(sfxNextLevel != null){
+            if(characterState.getKey!=0){
+                if(sfxNextLevel != null){
                 sfxNextLevel.Play();
             }
             completeText.text = "YOU HAVE COMPLETED THE LEVEL!";
             Invoke("nextLevel", 3);
+
+            }else{
+                completeText.text = "Please Get the Key";
+            }
         }
     }
 
