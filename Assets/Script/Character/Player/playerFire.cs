@@ -40,5 +40,12 @@ public class playerFire : MonoBehaviour
             targetStates.takeDamage(characterState,targetStates);
             Destroy(gameObject);
         }
+        if(other.gameObject.CompareTag("BigBoss")){
+            // find the enemy states
+            var targetStates = other.GetComponent<BigCubeBoss>().GetComponent<CharacterState>();
+            // make the damage
+            targetStates.takeDamage(characterState,targetStates);
+            Destroy(gameObject);
+        }
     }
 }
