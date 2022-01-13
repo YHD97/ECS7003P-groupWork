@@ -20,6 +20,8 @@ public class NewPlayerMovement : MonoBehaviour
     int JumpCount;
 
     public Vector2 moveValue;
+    public GameObject MagicHat;
+    private Animator anim;
 
     
 
@@ -32,6 +34,7 @@ public class NewPlayerMovement : MonoBehaviour
        rb = GetComponent <Rigidbody2D>();
        coll = GetComponent <Collider2D>();
        characterState = GetComponent<CharacterState>(); 
+       anim = GetComponent<Animator>();
        GameManager.Instance.RegisterPlayer(characterState);  
        //set base state for player 
        characterState.currentHealth = 100;
@@ -45,6 +48,9 @@ public class NewPlayerMovement : MonoBehaviour
         //update the player position
         characterState.playerPositionX = transform.position.x;
         characterState.playerPositionY = transform.position.y;
+        if(characterState.getWeapon){
+            anim.Play("MagicMode"); 
+        }
          
 
         //Jump system

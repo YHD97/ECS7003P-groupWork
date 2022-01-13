@@ -23,7 +23,7 @@ public class magicchange : MonoBehaviour
         if (collision.gameObject.tag == "MagicHat")
         {
             anim.Play("MagicMode");
-            print(1);
+            
         }
     }
 }

@@ -20,17 +20,17 @@ public class PlayerWeapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        // if(characterState.getWeapon){
-            
-
-        // }
-        if(Input.GetKeyDown(KeyCode.J)){
+        if(characterState.getWeapon){
+            if(Input.GetKeyDown(KeyCode.J)){
                 if(sfxFireball != null)
                 {
                 sfxFireball.PlayOneShot(sfxFireball.clip);
                 }
             fire();
         }
+            
+        }
+        
        
         
     }
