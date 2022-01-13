@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: afdb6018e67c7452c889a971dd2f3ce7, type: 3}
-  m_Name: PlayerData
+  m_Name: BigCubeBossData
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
-  baseDefence: 0
-  currentDefence: 0
-  minDamage: 10
-  maxDamage: 20
-  playerPositionX: 120
-  playerPositionY: 120
+  maxHealth: 500
+  currentHealth: 500
+  baseDefence: 5
+  currentDefence: 5
+  minDamage: 20
+  maxDamage: 30
+  playerPositionX: 0
+  playerPositionY: 0
   getKey: 0
   getWeapon: 0

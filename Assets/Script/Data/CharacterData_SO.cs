@@ -15,6 +15,9 @@ public class CharacterData_SO : ScriptableObject {
     public float playerPositionX;
     public float playerPositionY;
 
+    public int getKey;
+    public bool getWeapon;
+
 
 
 }

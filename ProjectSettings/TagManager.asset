@@ -10,6 +10,8 @@ TagManager:
   - Fireball
   - Acid Drop
   - CVDFilter
+  - BigBoss
+  - BigBossWeapon
   - MagicHat
   - Boss
   layers:

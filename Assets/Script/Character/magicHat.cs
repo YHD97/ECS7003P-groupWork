@@ -2,55 +2,50 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
-public class treasureBox : MonoBehaviour
+public class magicHat : MonoBehaviour
 {
-    public GameObject doorKeys;
-    private bool canOpen;
-    private bool isOpened;
-    private Animator anim;
+    private bool canGetWeapon;
     private CharacterState characterState;
+    private bool isGet;
+    private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
-        isOpened = false;
         characterState = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterState>();
-
+        isGet = characterState.getWeapon;
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(characterState.getKey != 0){
-            anim.SetTrigger("Opening");
-            isOpened = true;
-        }else{
-            isOpened = false;
+        if(isGet){
+            Destroy(gameObject);
+            
         }
+        // push E to save data in save point
         if(Input.GetKeyDown(KeyCode.E)){
-            if(canOpen && !isOpened){
-                anim.SetTrigger("Opening");
-                isOpened = true;
-                Instantiate(doorKeys,transform.position,Quaternion.identity);
-                characterState.getKey =1;
+            if(canGetWeapon && !isGet){
+                Destroy(gameObject);
+                isGet = true;
+                characterState.getWeapon = true;
             }
+            
         }
         
     }
+    // Check if the player is at the save point
     void OnTriggerEnter2D(Collider2D other) {
         //the treasure box can open
         if(other.gameObject.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.BoxCollider2D"){
-            canOpen = true;
+            canGetWeapon = true;
         } 
     }
-
-    //the treasure box cannot open
     void OnTriggerExit2D(Collider2D other) {
         if(other.gameObject.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.BoxCollider2D"){
-            canOpen = false;
+            canGetWeapon = false;
+            
+            
         } 
     }
 }

@@ -46,10 +46,6 @@ public class NewPlayerMovement : MonoBehaviour
         characterState.playerPositionX = transform.position.x;
         characterState.playerPositionY = transform.position.y;
          
-        // if health is 0, player deadth
-        // if(characterState.currentHealth <= 0){
-        //     Destroy(gameObject);
-        // }
 
         //Jump system
         if((Input.GetKeyDown(KeyCode.W)||Input.GetKeyDown(KeyCode.Space)) && JumpCount > 0){

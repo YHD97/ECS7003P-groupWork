@@ -16,7 +16,6 @@ public class playerFire : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         characterState = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterState>();
-        
         playerTransform = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         fireBallTransform = GetComponent<Transform>();
         if(playerTransform.localScale.x >0){
@@ -38,6 +37,13 @@ public class playerFire : MonoBehaviour
         {
             // find the enemy states
             var targetStates = other.GetComponent<enemy_move>().GetComponent<CharacterState>();
+            // make the damage
+            targetStates.takeDamage(characterState,targetStates);
+            Destroy(gameObject);
+        }
+        if(other.gameObject.CompareTag("BigBoss")){
+            // find the enemy states
+            var targetStates = other.GetComponent<BigCubeBoss>().GetComponent<CharacterState>();
             // make the damage
             targetStates.takeDamage(characterState,targetStates);
             Destroy(gameObject);
