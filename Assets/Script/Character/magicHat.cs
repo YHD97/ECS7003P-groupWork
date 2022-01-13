@@ -5,10 +5,9 @@ using UnityEngine;
 public class magicHat : MonoBehaviour
 {
     private bool canGetWeapon;
-    public GameObject savedSprite;
-    public GameObject particles;
     private CharacterState characterState;
     private bool isGet;
+    private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +34,6 @@ public class magicHat : MonoBehaviour
         }
         
     }
-    
     // Check if the player is at the save point
     void OnTriggerEnter2D(Collider2D other) {
         //the treasure box can open

@@ -8,22 +8,30 @@ public class PlayerWeapon : MonoBehaviour
     public AudioSource sfxFireball;
     public int destroyFireballTime;
     private GameObject fireball2;
-    private Animator anim;
+    private CharacterState characterState;
+
     // Start is called before the first frame update
     void Start()
     {
+        characterState = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterState>();
+
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {   
+        // if(characterState.getWeapon){
+            
+
+        // }
         if(Input.GetKeyDown(KeyCode.J)){
-            if(sfxFireball != null)
-            {
+                if(sfxFireball != null)
+                {
                 sfxFireball.PlayOneShot(sfxFireball.clip);
-            }
+                }
             fire();
         }
+       
         
     }
     

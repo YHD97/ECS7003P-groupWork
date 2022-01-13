@@ -108,11 +108,10 @@ public class BigCubeBoss : MonoBehaviour
        timer += Time.deltaTime;
         if(timer > respawnTime){
             //Action
-            if(transform.position == rightPoint.position){
-                instantiatedObj = Instantiate(fireball, transform.position,transform.rotation);
-                Destroy(instantiatedObj, killObjectTime);
-                timer = 0;
-            }
+            movePosition.position = new Vector2(rightPoint.position.x-1.0f,rightPoint.position.y);
+            instantiatedObj = Instantiate(fireball, transform.position,transform.rotation);
+            Destroy(instantiatedObj, killObjectTime);
+            timer = 0;
             
         }
    }

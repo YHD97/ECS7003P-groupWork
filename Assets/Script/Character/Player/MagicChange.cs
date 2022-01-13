@@ -18,11 +18,12 @@ public class magicchange : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "MagicHat")
         {
             anim.Play("MagicMode");
+            print(1);
         }
     }
 }
