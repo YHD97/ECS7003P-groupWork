@@ -20,3 +20,5 @@ MonoBehaviour:
   maxDamage: 20
   playerPositionX: -14.11
   playerPositionY: -7.83
+  getKey: 1
+  getWeapon: 1
