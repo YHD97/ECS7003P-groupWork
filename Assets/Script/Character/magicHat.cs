@@ -12,16 +12,15 @@ public class magicHat : MonoBehaviour
     void Start()
     {
         characterState = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterState>();
-        isGet = characterState.getWeapon;
         
     }
 
     // Update is called once per frame
     void Update()
     {
+        isGet = characterState.getWeapon;
         if(isGet){
-            Destroy(gameObject);
-            
+            Destroy(gameObject); 
         }
         // push E to save data in save point
         if(Input.GetKeyDown(KeyCode.E)){
