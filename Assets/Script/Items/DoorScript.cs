@@ -42,10 +42,14 @@ public class DoorScript : MonoBehaviour
         {
             SceneManager.LoadScene(0);
         } 
-        else 
+        else if(SceneManager.GetActiveScene().buildIndex == 4)
         {
+            SceneManager.LoadScene(2);
+            GlobalPrefs.SaveCurrentLevel(2);
+        }else{
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             GlobalPrefs.SaveCurrentLevel(SceneManager.GetActiveScene().buildIndex + 1);
+            
         }
     }
 }
