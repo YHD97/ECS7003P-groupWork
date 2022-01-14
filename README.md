@@ -6,11 +6,18 @@ In Unity, play Prototype Scene in Assets -> Scenes.
 # Controls
 W or Left Arrow     = Move Left \
 S or Right Arrow    = Move Right \
-Spacebar            = Jump
+Spacebar            = Jump \
+J                   = Attack \
+E                   = Interacting with game objects \
+Esc                 = Menu 
 
-# Rules
-Reach the next level using the controls and jumping over obstacles.
+# Scene description
+Tutorial scenes: Clear and simple text instructing players on how to play the game. \
+Level 1 scenes: Explore the map and find way out. \
+Level 2 scenes: Move forward fastly though the map without dead to the exit. \
+Level 1 for DifficultMode: Hard mode for Level 1. 
 
-## Game Over Conditions
+
+# Game Over Condition
 Touching spikes, acid drops and red cubes. \
 Touching the left hand side of the camera or dropping off the camera.
