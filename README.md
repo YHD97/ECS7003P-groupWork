@@ -1,7 +1,15 @@
 # ECS7003P-groupWork
 
 # How to play the game - Prototype
-In Unity, play Prototype Scene in Assets -> Scenes.
+In Main Menu 
+Start New game -> NEW GAME \
+Start Hard Mode -> HARD MODE \
+Load Loading Savedata -> LOAD \
+Start Tutorial -> TUTORIAL \
+Game parameters setting -> OPTIONS \
+Detailed rules -> RULES
+
+
 
 # Controls
 W or Left Arrow     = Move Left \
