@@ -1,7 +1,7 @@
 # ECS7003P-groupWork
 
 # How to play the game - Prototype
-In Main Menu 
+In Main Menu \ 
 Start New game -> NEW GAME \
 Start Hard Mode -> HARD MODE \
 Load Loading Savedata -> LOAD \
